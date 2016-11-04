@@ -12,3 +12,14 @@ function getList(selector,mode){
 	}
 	return newItems
 }
+
+
+// function using only javascript for text nodes
+function getList(selector){
+	var newItems = []
+	items = document.querySelectorAll(selector)
+	for(var i = 0; i<items.length;i++){
+		newItems.push(items[i].innerHTML)
+	}
+	return newItems
+}
